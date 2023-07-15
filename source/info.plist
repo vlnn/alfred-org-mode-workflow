@@ -6,55 +6,102 @@
 	<string>ago.alfred-todo-to-orgmode</string>
 	<key>connections</key>
 	<dict>
-		<key>0CBAD592-FA38-441B-977C-7CF0489F909B</key>
+		<key>1537E879-143F-4041-A729-E2DAC2778093</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>ED716DC1-030F-4216-875E-A795905D6B18</string>
+				<string>54350FFE-03E0-4E41-B082-840EC46A1C59</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
+		<key>193C870C-CF4F-48D0-914D-E5C211044E7F</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0CBAD592-FA38-441B-977C-7CF0489F909B</string>
+				<string>E6ACCFE7-D169-4C14-ACE9-AADC95C2BC2F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>BDE1908D-A596-4E64-8EC9-E0B45830589C</key>
+		<key>203FAA74-BD99-4286-9A53-C166DC43D7C2</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>13734DD2-23C2-489A-9D4B-8638EFF5CEFB</string>
+				<string>2A47F17C-20F2-439B-BFD4-7BB3603D5840</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>CE3708AA-1D2C-4DA9-8AE8-7AB93F64FC30</key>
+		<key>4E6D33B1-655A-4ABB-BA4C-F65EFE9CB44B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BDE1908D-A596-4E64-8EC9-E0B45830589C</string>
+				<string>3979E40F-C8E0-4736-91E6-EBAB891E4B81</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CE89D9D3-5DCC-4C5A-B4CC-F2AA48E8B2E9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1537E879-143F-4041-A729-E2DAC2778093</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D2503E7B-4999-4C88-A9B8-608E89260D03</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E6D33B1-655A-4ABB-BA4C-F65EFE9CB44B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6ACCFE7-D169-4C14-ACE9-AADC95C2BC2F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8357E438-EAB5-406C-BCE1-17C0BB724A98</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Alexander Gogl</string>
 	<key>description</key>
-	<string>Create orgmode todos or headlines from todo and note strings.</string>
+	<string>Add orgmode item by invoking org-capture</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -64,27 +111,54 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>concurrently</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/emacsclient -ne "(algo-func-make-capture-frame)"</string>
+				<key>scriptargtype</key>
 				<integer>1</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>TODO</string>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>ED716DC1-030F-4216-875E-A795905D6B18</string>
+			<string>2A47F17C-20F2-439B-BFD4-7BB3603D5840</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>203FAA74-BD99-4286-9A53-C166DC43D7C2</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -94,30 +168,46 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>from orgmode_entry import OrgmodeEntry
+				<string>import os
+from org_mode_capture_run import run
 
-entry = """{query}"""
-org = OrgmodeEntry()
-# Use an absolute path
-org.inbox_file = '/Users/Alex/Documents/Planung/Planning/Inbox.org'
-org.delimiter = ':: '
-org.add_creation_date = True  # enable to add a creation date
-org.replace_relative_dates = True  # enable to convert relative dates into orgmode dates
 
-entry = 'TODO ' + entry
-
-message = org.add_entry(entry)
-
+message = run("""{query}""", "todo")
 print(message)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>org_mode_capture_run.py</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>0CBAD592-FA38-441B-977C-7CF0489F909B</string>
+			<string>1537E879-143F-4041-A729-E2DAC2778093</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>TODO</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>54350FFE-03E0-4E41-B082-840EC46A1C59</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -136,9 +226,9 @@ print(message)</string>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</string>
+			<string>CE89D9D3-5DCC-4C5A-B4CC-F2AA48E8B2E9</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -147,11 +237,7 @@ print(message)</string>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>output</key>
-				<integer>1</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -161,9 +247,9 @@ print(message)</string>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>13734DD2-23C2-489A-9D4B-8638EFF5CEFB</string>
+			<string>3979E40F-C8E0-4736-91E6-EBAB891E4B81</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -173,29 +259,25 @@ print(message)</string>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>from orgmode_entry import OrgmodeEntry
+				<string>import os
+from org_mode_capture_run import run
 
-entry = """{query}"""
-org = OrgmodeEntry()
-# Use an absolute path
-org.inbox_file = '/Users/Alex/Documents/Planung/Planning/Inbox.org'
-org.delimiter = ':: '
-org.add_creation_date = True  # enable to add a creation date
-org.replace_relative_dates = True  # enable to convert relative dates into orgmode dates
 
-message = org.add_entry(entry)
-
-print(message)
-</string>
+message = run("""{query}""", "note")
+print(message)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>BDE1908D-A596-4E64-8EC9-E0B45830589C</string>
+			<string>4E6D33B1-655A-4ABB-BA4C-F65EFE9CB44B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -214,46 +296,579 @@ print(message)
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>CE3708AA-1D2C-4DA9-8AE8-7AB93F64FC30</string>
+			<string>D2503E7B-4999-4C88-A9B8-608E89260D03</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Note</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>8357E438-EAB5-406C-BCE1-17C0BB724A98</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import os
+from org_mode_capture_run import run
+
+
+message = run("""{query}""", "inspiration")
+print(message)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>9</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E6ACCFE7-D169-4C14-ACE9-AADC95C2BC2F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>insp</string>
+				<key>subtext</key>
+				<string>Add an inspiration to the design research's inbox</string>
+				<key>text</key>
+				<string>Add inspiration</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>193C870C-CF4F-48D0-914D-E5C211044E7F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>See https://github.com/alexandergogl/alfred-org-mode-workflow.</string>
+	<string>Requires Python 3.9
+
+Append a todo or a note to an org-mode file with a short and convenient command in Alfred. The workflow requires Alfred's "Powerpack." 
+
+
+See https://github.com/alexandergogl/alfred-org-mode-workflow.</string>
 	<key>uidata</key>
 	<dict>
-		<key>0CBAD592-FA38-441B-977C-7CF0489F909B</key>
+		<key>1537E879-143F-4041-A729-E2DAC2778093</key>
 		<dict>
+			<key>xpos</key>
+			<real>290</real>
 			<key>ypos</key>
-			<real>40</real>
+			<real>290</real>
 		</dict>
-		<key>13734DD2-23C2-489A-9D4B-8638EFF5CEFB</key>
+		<key>193C870C-CF4F-48D0-914D-E5C211044E7F</key>
 		<dict>
+			<key>xpos</key>
+			<real>95</real>
 			<key>ypos</key>
-			<real>130</real>
+			<real>545</real>
 		</dict>
-		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
+		<key>203FAA74-BD99-4286-9A53-C166DC43D7C2</key>
 		<dict>
+			<key>xpos</key>
+			<real>85</real>
 			<key>ypos</key>
-			<real>60</real>
+			<real>90</real>
 		</dict>
-		<key>BDE1908D-A596-4E64-8EC9-E0B45830589C</key>
+		<key>2A47F17C-20F2-439B-BFD4-7BB3603D5840</key>
 		<dict>
+			<key>xpos</key>
+			<real>260</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>90</real>
 		</dict>
-		<key>CE3708AA-1D2C-4DA9-8AE8-7AB93F64FC30</key>
+		<key>3979E40F-C8E0-4736-91E6-EBAB891E4B81</key>
 		<dict>
+			<key>xpos</key>
+			<real>455</real>
 			<key>ypos</key>
-			<real>180</real>
+			<real>410</real>
 		</dict>
-		<key>ED716DC1-030F-4216-875E-A795905D6B18</key>
+		<key>4E6D33B1-655A-4ABB-BA4C-F65EFE9CB44B</key>
 		<dict>
+			<key>xpos</key>
+			<real>290</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>410</real>
+		</dict>
+		<key>54350FFE-03E0-4E41-B082-840EC46A1C59</key>
+		<dict>
+			<key>xpos</key>
+			<real>455</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>8357E438-EAB5-406C-BCE1-17C0BB724A98</key>
+		<dict>
+			<key>xpos</key>
+			<real>455</real>
+			<key>ypos</key>
+			<real>545</real>
+		</dict>
+		<key>CE89D9D3-5DCC-4C5A-B4CC-F2AA48E8B2E9</key>
+		<dict>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>D2503E7B-4999-4C88-A9B8-608E89260D03</key>
+		<dict>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>E6ACCFE7-D169-4C14-ACE9-AADC95C2BC2F</key>
+		<dict>
+			<key>xpos</key>
+			<real>295</real>
+			<key>ypos</key>
+			<real>545</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>python3</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Path to python 3 executable</string>
+			<key>label</key>
+			<string>Python path</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>python_executable</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>::</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Symbol separating heading and content</string>
+			<key>label</key>
+			<string>Delimiter</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>delimiter</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>org-mode file to file todos</string>
+			<key>label</key>
+			<string>TODOs inbox</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>todos_inbox</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Nesting level of added TODOs</string>
+			<key>label</key>
+			<string>TODOs heading level</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>todos_heading_level</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>org-mode file to file notes</string>
+			<key>label</key>
+			<string>Notes inbox</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>notes_inbox</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Nesting level of added notes</string>
+			<key>label</key>
+			<string>Notes heading level</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>notes_heading_level</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>org-mode file to file inspiration notes</string>
+			<key>label</key>
+			<string>Inspirations inbox</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>inspirations_inbox</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>1</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Nesting level of added inspiration notes</string>
+			<key>label</key>
+			<string>Inspiration notes heading level</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>inspirations_heading_level</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Add a creation date as a property to the heading.</string>
+			<key>label</key>
+			<string>Add creation date</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>add_creation_date</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Relative dates like today, heute or yesterday are replaced with org-mode timestamps.</string>
+			<key>label</key>
+			<string>Replace relative dates</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>replace_relative_dates</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Replace absolute dates like 01.10 15:00 into orgmode dates =&gt; &lt;2016-10-01 Sun 15:00&gt;</string>
+			<key>label</key>
+			<string>Replace absolute dates</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>replace_absolute_dates</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Replace priority symbols like #b to [#B]</string>
+			<key>label</key>
+			<string>Use priority tags</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>use_priority_tags</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>#</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Tag used to create org-mode priorities like #a =&gt; [#A]</string>
+			<key>label</key>
+			<string>Priority tag</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>priority_tag</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Convert a schedule date pattern into an org scheduled date like S:today =&gt; SCHEDULED: &lt;2023-01-20&gt;</string>
+			<key>label</key>
+			<string>Convert scheduled dates</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>convert_scheduled</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>S:</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Shorthand to create org mode scheduled keyword.</string>
+			<key>label</key>
+			<string>Scheduled pattern</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>scheduled_pattern</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Convert a deadline pattern into an org deadline like DL:tomorrow =&gt; DEADLINE: &lt;2023-01-21&gt;</string>
+			<key>label</key>
+			<string>Convert deadlines</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>convert_deadlines</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>DL:</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Shorthand to create org mode deadline keyword.</string>
+			<key>label</key>
+			<string>Deadline pattern</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>deadline_pattern</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Convert a linebreak symbol like two consecutive spaces to a linebreak</string>
+			<key>label</key>
+			<string>Smart line break</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>smart_line_break</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>\s\s</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Pattern converted to a linebreak</string>
+			<key>label</key>
+			<string>Line break pattern</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>line_break_pattern</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string>Cleanup spaces in text like double, leading, and trailing spaces</string>
+			<key>label</key>
+			<string>Cleanup spaces</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>cleanup_spaces</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>2.21</string>
 	<key>webaddress</key>
 	<string>http://issuu.com/alex.gogl</string>
 </dict>

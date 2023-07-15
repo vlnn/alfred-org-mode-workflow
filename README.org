@@ -1,5 +1,7 @@
 # An org-mode-capture workflow for Alfred
 
+This is fork of great workflow made by Alexander Gogl. I just stripped all the extras, fixed a tiny bug and did small reconfiguration. But even though the code is mostly the same, structurally repo got pretty far away from its ancestor.
+
 Append a todo or a note to an org-mode file with a short and convenient command in [[https://www.alfredapp.com/][Alfred]]. The workflow requires Alfred's "Powerpack."
 
 * Features

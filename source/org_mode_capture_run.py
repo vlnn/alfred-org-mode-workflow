@@ -72,7 +72,9 @@ def run(entry, action):
     # Cleanup spaces (double, leading, and trailing)
     org.cleanup_spaces = convert_boolean(os.getenv("cleanup_spaces"))
 
-    entry = 'TODO ' + entry
+    if action != "note" and action != "inspiration":
+        entry = 'TODO ' + entry
+
     message = org.add_entry(entry)
 
     return message
