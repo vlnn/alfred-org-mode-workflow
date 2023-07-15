@@ -4,11 +4,7 @@ from org_mode_entry import OrgmodeEntry
 
 
 def convert_boolean(string):
-    if string == "1":
-        return True
-    else:
-        return False
-
+    return string == "1"
 
 def run(entry, action):
     org = OrgmodeEntry()
