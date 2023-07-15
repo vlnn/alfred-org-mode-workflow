@@ -2,7 +2,7 @@
 
 * Preface
 
-This is fork of great workflow made by [[@alexandergogl][Alexander Gogl]]. @vlnn just stripped it off most of the extras, fixed a tiny bug and, and also did a small reconfiguration. But even though the code is mostly the same, structurally repo got pretty far away from its ancestor. Thus I don't expect this version to be merged into the original repo. Please pay a visit to the [[https://github.com/alexandergogl/alfred-org-mode-workflow][original repo]].
+This is fork of great workflow made by [[@alexandergogl][Alexander Gogl]]. @vlnn just stripped it off most of the extras, fixed a tiny bug, and also did a small reconfiguration. But even though the code is mostly the same, structurally repo got pretty far away from its ancestor. Thus I don't expect this version to be merged into the original repo. Please pay a visit to the [[https://github.com/alexandergogl/alfred-org-mode-workflow][original repo]].
 
 * What's this is about
 
@@ -54,10 +54,39 @@ By default, the date of creation is added to a property car (you can disable it 
 
 * Installation and customising variables
 
+This workflow is integration between running emacs server and user input. That's why there are actually two main running parts:
+
+** Alfred side
+
 Double klick on ~org-mode-capture.alfredworkflow~ to add it to Alfred's set of workflows. Then you need to set up the workflow by customising the workflow variables with Alfred's ~Configure Workflow...~ command (see figure below). It is obligatory to set at least the path to your inbox.org files. The non-obligatory variables have sane defaults, but can be customised by your liking: if you prefer ~--~ as a title-content separator, then you can change it as well.
 
 #+caption: Configure Workflow
 [[file:images/user_configuration.png]]
+
+If you want to recompile the workflow you should be able to do it with `make compile`, which will update/create new ~org-mode-capture.alfredworflow~ file, that you may use as shown above.
+
+** Emacs side
+
+1. You should have your emacs server running (meanining if you enter `brew services` to your terminal you can see something like this:
+```
+Name          Status  User File
+emacs-plus@28 started user   ~/Library/LaunchAgents/homebrew.mxcl.emacs-plus@28.plist
+```
+If you don't see ~emacs-plus~ or other services starting with ~emacs~ you have to install it.
+
+2. Add next magic elisp piece of code into your ~config.el~:
+   ``` elisp
+    (defun make-orgcapture-frame ()
+  "Create a new frame and run org-capture."
+  (interactive)
+  (make-frame '((name . "remember") (width . 80) (height . 16)
+                (top . 400) (left . 300)
+                (font . "-apple-Monaco-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")))
+
+  (select-frame-by-name "remember")
+  (org-capture))
+  ```
+  This will add a function `make-orgcapture-frame` to your emacs environment, which will be called by the python script, which will be called by Alfred. Don't worry -- it should just work. If not please ping me in issues, and I will document the process of the setup more thoroughly.
 
 * Reporting bugs
 
