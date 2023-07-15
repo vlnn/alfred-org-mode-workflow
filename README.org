@@ -67,16 +67,18 @@ If you want to recompile the workflow you should be able to do it with `make com
 
 ** Emacs side
 
-1. You should have your emacs server running (meanining if you enter `brew services` to your terminal you can see something like this:
-```
-Name          Status  User File
-emacs-plus@28 started user   ~/Library/LaunchAgents/homebrew.mxcl.emacs-plus@28.plist
-```
+1) You should have your emacs server running, meanining if you enter `brew services` to your terminal you can see something like this:
+
+#+BEGIN_SRC
+emacs-plus@28 started user  .../LaunchAgents/homebrew.mxcl.emacs-plus@28.plist
+#+END_SRC
+
 If you don't see ~emacs-plus~ or other services starting with ~emacs~ you have to install it.
 
-2. Add next magic elisp piece of code into your ~config.el~:
-   ``` elisp
-    (defun make-orgcapture-frame ()
+2) Add next magic elisp piece of code into your ~config.el~ :
+
+#+BEGIN_SRC elisp
+(defun make-orgcapture-frame ()
   "Create a new frame and run org-capture."
   (interactive)
   (make-frame '((name . "remember") (width . 80) (height . 16)
@@ -85,7 +87,8 @@ If you don't see ~emacs-plus~ or other services starting with ~emacs~ you have t
 
   (select-frame-by-name "remember")
   (org-capture))
-  ```
+#+END_SRC
+
   This will add a function `make-orgcapture-frame` to your emacs environment, which will be called by the python script, which will be called by Alfred. Don't worry -- it should just work. If not please ping me in issues, and I will document the process of the setup more thoroughly.
 
 * Reporting bugs
